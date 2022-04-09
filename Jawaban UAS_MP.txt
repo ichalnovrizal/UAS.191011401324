@@ -1,0 +1,37 @@
+1. Apa yang dimaksud dengan state management pada flutter?
+2. Sebutkan apa saja state management pada flutter ?
+
+Jawaban :
+
+1. State Management adalah sebuah cara untuk mengatur data / state kita bekerja, bisa juga untuk memisahkan antara logic dan view dimana logic tersebut juga bisa re-usable. Cara kerja State Management seperti provider dan listen, maksudnya adalah kita bisa memasukkan state yang kemungkinan bisa berubah sewaktu-waktu, lalu widget yang subscribe (listen) dengan provider yang kita buat akan berubah sesuai dengan state yang berubah. State Management memiliki banyak packages / library yang bisa kita gunakan untuk itu, yaitu seperti :
+•Bloc
+•Provider
+•Redux
+•Getlt
+
+2.Jenis-Jenis State Management Flutter :
+-Provider
+Provider merupakan state management yang paling sederhana dan mudah digunakan. Provider menyediakan sebuah teknik mengolah state yang dapat digunakan untuk memanage data didalam aplikasi. Manfaat menggunakan provider antara lain :
+*Mengalokasikan resource menjadi lebih sederhana
+*Lazy-loading
+*Mengurangi boilerplate saat membuat kelas baru setiap saat
+*Support dengan devtool, karena status aplikasi akan terlihat di flutter devtool
+*Peningkatan skalabilitas untuk class yang memanfaatkan mekanisme listen yang dibangun secara kompleks.
+
+-Riverpod
+Riverpod mirip dengan provider yang compile-safe untuk digunakan dan teruji (testable). Kita tidak akan menemukan ProviderNotFoundException atau error dalam menangani proses dalam mengelola state. Karena, selagi kode kita berhasil di kompilasi, maka aplikasi akan tetap dijalankan.
+Riverpod mendukung multiple providers dengan tipe yang sama, proses asynchronous, dan mampu menambahkan provider dari file mana saja.
+
+-Redux
+Bagi yang menjadi web developer, mungkin kita sudah tidak asing dengan yang namanya redux. Redux adalah arsitektur aliran data searah yang memudahkan pengembangan, pemeliharaan, dan pengujian aplikasi. Redux berasal dari javascript yang membuat predictable state container untuk aplikasi. Berikut ini adalah manfaat ketika kita menggunakan Redux :
+*Sangat scalable dan terstruktur dengan baik.
+*Memiliki alur yang jelas yang membuatnya menjadi mudah mengelola bahkan mengembalikan perubahan state, atau debug aplikasi.
+*Perubahan state dilakukan dengan fungsi.
+*Limited API.
+
+-BLoC
+BLoC atau Business Logic Component adalah design pattern yang membantu kita untuk memisahkan presentation dengan business logic. Sehingga komponen pada project terbagi menjadi presentational component, BLoC, dan backend. Pattern ini memperbolehkan developer untuk fokus dalam mengkonversikan event menjadi state.
+BLoC mengelola state dengan menggunakan pendekatan stream atau reactive. Secara umum, data akan bergerak dari BLOC ke UI, atau sebaliknya dalam bentuk streams.
+
+-GetX
+GetX merupakan salah satu pilihan terbaik untuk state management yang memiliki performa tinggi, memiliki injection dependency yang cerdas, serta memiliki manajemen route yang cepat dan praktis. GetX tidak akan memberatkan aplikasi kita, meskipun memiliki fitur yang banyak, namun masing-masing fitur berada dalam container terpisah dan akan mulai dijalankan setelah dipakai. Misal, jika kita hanya menggunakan state management, maka hanya state management lah yang akan di compile, tidak termasuk route dan lainnya.
